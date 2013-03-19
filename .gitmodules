@@ -1,0 +1,18 @@
+[submodule "modules/apt"]
+	path = modules/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt.git
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "modules/homedir"]
+	path = modules/homedir
+	url = https://github.com/ahdinosaur/puppet-homedir.git
+[submodule "modules/vcsrepo"]
+	path = modules/vcsrepo
+	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
+[submodule "modules/googlechrome"]
+	path = modules/googlechrome
+	url = https://github.com/smarchive/puppet-googlechrome.git
+[submodule "modules/users"]
+	path = modules/users
+	url = https://github.com/dcsobral/puppet-users.git
