@@ -5,8 +5,8 @@ class wheezy {
     purge_sources_list => true
   }
 
-  apt::pin { 'testing': priority => 900 }
-  #apt::pin { 'unstable': priority => 300 }
+  #apt::pin { 'wheezy-backports': priority => 400 }
+  apt::pin { 'unstable': priority => 50 }
 
   apt::source { 'debian_wheezy' :
     location => 'http://ftp.us.debian.org/debian/',

@@ -6,6 +6,9 @@ class dev {
   }
   # ruby
   class { rvm: }
-  rvm::system_user { michael: }
+  # nodejs
+  class { nodejs: }
+  # clojure
+  class { build::lein: }
 }
 
