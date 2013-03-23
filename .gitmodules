@@ -13,6 +13,6 @@
 [submodule "modules/googlechrome"]
 	path = modules/googlechrome
 	url = https://github.com/smarchive/puppet-googlechrome.git
-[submodule "modules/users"]
-	path = modules/users
-	url = https://github.com/dcsobral/puppet-users.git
+[submodule "modules/rvm"]
+	path = modules/rvm
+	url = https://github.com/blt04/puppet-rvm.git
