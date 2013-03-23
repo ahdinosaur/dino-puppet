@@ -6,7 +6,17 @@ class wheezy {
   }
 
   #apt::pin { 'wheezy-backports': priority => 400 }
-  apt::pin { 'unstable': priority => 50 }
+  #apt::pin { 'sid': priority => 50 }
+
+
+  apt::key { 'squeeze':
+    key => '473041FA',
+    key_source => 'https://ftp-master.debian.org/archive-key-6.0.asc',
+  }
+  apt::key { 'wheezy':
+    key => '46925553',
+    key_source => 'https://ftp-master.debian.org/archive-key-7.0.asc',
+  }
 
   apt::source { 'debian_wheezy' :
     location => 'http://ftp.us.debian.org/debian/',
