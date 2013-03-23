@@ -31,5 +31,16 @@ class common {
     package{"tree":
         ensure => "latest",
     }
+
+    # downloading
+    package{"wget":
+        ensure => "latest",
+    }
+    package{"curl":
+        ensure => "latest",
+    }
+    package{"aria2":
+        ensure => "latest",
+    }
 }
 
