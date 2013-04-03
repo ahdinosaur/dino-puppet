@@ -4,7 +4,7 @@
 node default {
 }
 
-node 'blue-dream' {
+node 'white-widow' {
   class { 'wheezy': }
   class { 'common': }
   class { 'common-gui': }
@@ -13,7 +13,7 @@ node 'blue-dream' {
   class { 'login': }
   class { 'awesome': }
   class { 'xfce': }
-  class { 'nvidia': }
+  class { 'radeon': }
   class { 'web': }
   class { 'mail': }
   class { 'office': }

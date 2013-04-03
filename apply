@@ -1,1 +1,1 @@
-puppet apply --verbose manifests/blue-dream.pp --modulepath modules
+puppet apply --verbose manifests/$(hostname).pp --modulepath modules

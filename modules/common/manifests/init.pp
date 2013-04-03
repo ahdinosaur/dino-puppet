@@ -42,5 +42,9 @@ class common {
     package{"aria2":
         ensure => "latest",
     }
+    package{"rtorrent":
+        ensure => "latest",
+    }
+    
 }
 
