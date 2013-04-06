@@ -5,7 +5,7 @@ node default {
 }
 
 node 'blue-dream' {
-  class { 'wheezy': }
+  class { 'unstable': }
   class { 'common': }
   class { 'common-gui': }
   class { 'network': }

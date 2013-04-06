@@ -27,4 +27,15 @@ class common-gui {
   package{"moc": 
     ensure => "latest",
   }
+  package{"gparted": 
+    ensure => "latest",
+  }
+  package{"unetbootin": 
+    ensure => "latest",
+  }
+  package{"xfburn": 
+    ensure => "latest",
+  }
+
+
 }

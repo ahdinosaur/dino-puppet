@@ -1,13 +1,14 @@
-# wheezy
+# debian unstable
 
-class wheezy {
+class unstable {
   class { 'apt':
     purge_sources_list => true
   }
+  apt::release { 'testing' };
 
-  #apt::pin { 'wheezy-backports': priority => 400 }
-  #apt::pin { 'sid': priority => 50 }
-
+  #apt::pin { 'testing': priority => 2000 }
+  #apt::pin { 'unstable': priority => 50 }
+  #apt::pin { 'experimental': priority => 40 }
 
   apt::key { 'squeeze':
     key => '473041FA',
@@ -18,9 +19,9 @@ class wheezy {
     key_source => 'https://ftp-master.debian.org/archive-key-7.0.asc',
   }
 
-  apt::source { 'debian_wheezy' :
+  apt::source { 'debian_testing' :
     location => 'http://ftp.us.debian.org/debian/',
-    release => 'wheezy',
+    release => 'testing',
     repos => 'main contrib non-free'
   }
 
@@ -30,9 +31,14 @@ class wheezy {
     repos => 'main contrib non-free'
   }
 
-  apt::source { 'debian_sid' :
+  apt::source { 'debian_unstable' :
     location => 'http://ftp.us.debian.org/debian/',
-    release => 'sid',
+    release => 'unstable',
+    repos => 'main contrib non-free'
+  }
+  apt::source { 'debian_experimental' :
+    location => 'http://ftp.us.debian.org/debian/',
+    release => 'experimental',
     repos => 'main contrib non-free'
   }
 }
