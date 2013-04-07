@@ -1,14 +1,13 @@
 # debian unstable
 
-class unstable {
+class debian {
   class { 'apt':
     purge_sources_list => true
   }
-  apt::release { 'testing' };
 
-  #apt::pin { 'testing': priority => 2000 }
-  #apt::pin { 'unstable': priority => 50 }
-  #apt::pin { 'experimental': priority => 40 }
+  class { 'apt::release':
+    release_id => 'unstable',
+  }
 
   apt::key { 'squeeze':
     key => '473041FA',
@@ -19,15 +18,27 @@ class unstable {
     key_source => 'https://ftp-master.debian.org/archive-key-7.0.asc',
   }
 
+  apt::source { 'debian_stable' :
+    location => 'http://ftp.us.debian.org/debian/',
+    release => 'stable',
+    repos => 'main contrib non-free'
+  }
+
+  apt::source { 'debian_stable_security' :
+    location => 'http://security.debian.org/',
+    release => 'stable/updates',
+    repos => 'main contrib non-free'
+  }
+
   apt::source { 'debian_testing' :
     location => 'http://ftp.us.debian.org/debian/',
     release => 'testing',
     repos => 'main contrib non-free'
   }
 
-  apt::source { 'debian_wheezy_security' :
+  apt::source { 'debian_testing_security' :
     location => 'http://security.debian.org/',
-    release => 'wheezy/updates',
+    release => 'testing/updates',
     repos => 'main contrib non-free'
   }
 
