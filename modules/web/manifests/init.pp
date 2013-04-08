@@ -14,9 +14,6 @@ class web {
   package { "xul-ext-firebug": 
     ensure => "latest"
   }
-  package { "xul-ext-firecookie": 
-    ensure => "latest"
-  }
   package { "xul-ext-https-everywhere": 
     ensure => "latest"
   }
