@@ -1,0 +1,2 @@
+aptitude install git puppet curl wget
+./apply

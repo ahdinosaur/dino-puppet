@@ -1,8 +1,9 @@
 # graphical user interface
 class web {
   # firefox
-  package { "iceweasel": 
-    ensure => "latest"
+  apt::force { 'iceweasel':
+    release => 'experimental',
+    require => Apt::Source['debian_experimental'],
   }
   package { "iceweasel-vimperator": 
     ensure => "latest"
@@ -23,6 +24,9 @@ class web {
     ensure => "latest"
   }
   package { "xul-ext-noscript": 
+    ensure => "latest"
+  }
+  package { "flashplugin-nonfree": 
     ensure => "latest"
   }
   # chrome
