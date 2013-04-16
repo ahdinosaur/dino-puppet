@@ -6,8 +6,12 @@ class debian {
   }
 
   class { 'apt::release':
-    release_id => 'unstable',
+    release_id => 'testing',
   }
+
+  apt::pin { 'testing': priority => 1001 }
+  apt::pin { 'unstable': priority => 400 }
+  apt::pin { 'experimental': priority => -1 }
 
   apt::key { 'squeeze':
     key => '473041FA',
