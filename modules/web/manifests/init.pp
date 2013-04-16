@@ -2,8 +2,8 @@
 class web {
   # firefox
   apt::force { 'iceweasel':
-    release => 'experimental',
-    require => Apt::Source['debian_experimental'],
+    release => 'unstable',
+    require => Apt::Source['debian_unstable'],
   }
   package { "iceweasel-vimperator": 
     ensure => "latest"
