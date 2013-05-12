@@ -1,11 +1,11 @@
 # office suite
 class office {
   # libreoffice
-    package{"libreoffice": 
-        ensure => "latest",
-    }
+  package{"libreoffice": 
+    ensure => "latest",
+  }
   # texmaker
-    package{"texmaker": 
-        ensure => "latest",
-    }
+  package{"texmaker": 
+    ensure => "latest",
+  }
 }

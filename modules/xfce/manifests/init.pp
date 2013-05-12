@@ -7,4 +7,8 @@ class xfce {
   package{"xfce4-goodies": 
     ensure => "latest",
   }
+  # themes
+  package{"murrine-themes": 
+    ensure => "latest",
+  }
 }

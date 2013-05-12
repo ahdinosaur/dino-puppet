@@ -20,4 +20,12 @@ class cad {
   package{"freecad":
     ensure => "latest",
   }
+  # gimp
+  package{"gimp": 
+    ensure => "latest",
+  }
+  # inkscape
+  package{"inkscape": 
+    ensure => "latest",
+  }
 }

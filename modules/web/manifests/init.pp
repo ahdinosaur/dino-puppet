@@ -1,9 +1,23 @@
 # graphical user interface
 class web {
-  # firefox
+  # default web browser
+  file { '/etc/alternatives/x-www-browser':
+    ensure => 'link',
+    target => '/usr/bin/iceweasel'
+  }
+  # iceweasel
+  package { "pkg-mozilla-archive-keyring":
+    ensure => "latest"
+  }
+  apt::source { 'iceweasel-release' :
+    location => 'http://mozilla.debian.net',
+    release => 'wheezy-backports',
+    repos => 'iceweasel-release',
+    require => Package['pkg-mozilla-archive-keyring']
+  }
   apt::force { 'iceweasel':
-    release => 'unstable',
-    require => Apt::Source['debian_unstable'],
+    release => 'wheezy-backports',
+    require => Apt::Source['iceweasel-release'],
   }
   package { "iceweasel-vimperator": 
     ensure => "latest"
